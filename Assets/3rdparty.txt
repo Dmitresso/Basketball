@@ -1,0 +1,7 @@
+Skybox    - https://www.pulsarbytes.com/
+Sounds    - https://learn.unity.com/project/unit-3-sound-and-effects
+            https://www.zapsplat.com/sound-effect-category/footsteps/
+Cursors   - https://iconscout.com/icon-pack/ui-elements-6
+            http://www.rw-designer.com/cursor-set/smalldot
+Fonts     - https://learn.unity.com/project/unit-5-user-interface
+Spotlight - https://free3dbase.com/3d-model/spot-light-3d-model-box-i/2218/263
