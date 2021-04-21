@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 
+/// Don't forget to add GameObject with "GameManager" attached to
+/// "Edit" -> "Project Settings..." -> "Script Execution Order" -> "Add script to custom order"
+/// with -50 value according to "Default Time"
 
 [Serializable]
 public class GameManager : Singleton<MonoBehaviour> {
@@ -146,9 +148,9 @@ public class GameManager : Singleton<MonoBehaviour> {
     }
 
     public void ExitApp() {
-        #if UNITY_EDITOR
-        EditorApplication.ExitPlaymode();
-        #endif        
+        // #if UNITY_EDITOR
+        // EditorApplication.ExitPlaymode();
+        // #endif
         
         SceneManager.ExitApp();
     }

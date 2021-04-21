@@ -1,13 +1,9 @@
 using System;
 using System.IO;
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-#if UNITY_EDITOR
-[InitializeOnLoad]
-#endif
 public static class SceneManager {
     private static AsyncOperation loadScene;
     private static GameManager loadSceneGM, gameSceneGM;

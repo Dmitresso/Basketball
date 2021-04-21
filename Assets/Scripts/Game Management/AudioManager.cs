@@ -5,7 +5,6 @@ public struct AudioSrc {
 }
 
 
-public delegate void VolumeChange(float value);
 public class AudioManager : Singleton<MonoBehaviour> {
     private SettingsMenu settingsMenu;
     
@@ -23,16 +22,13 @@ public class AudioManager : Singleton<MonoBehaviour> {
         AudioSrc.Soundtrack.volume = Settings.UserVolume;
         AudioSrc.SceneSound.volume = Settings.UserVolume;
         AudioSrc.PlayerSound.volume = Settings.UserVolume;
-        AudioSrc.BallSound.volume = Settings.UserVolume;
+        AudioSrc.BallSound.volume = Settings.UserVolume * 0.5f;
 
         
         AudioSrc.Soundtrack.loop = true;
         if (gameObject.scene.name == Scenes.Main) {
             AudioSrc.Soundtrack.clip = Res.Music.MainSoundtrack;
             AudioSrc.Soundtrack.Play();
-        
-            settingsMenu = GameObject.FindGameObjectWithTag(Tags.GM.Menu.Settings).GetComponent<SettingsMenu>();
-            settingsMenu.SoundtrackVolumeChanged += SetVolume;
         }
         else if (gameObject.scene.name == Scenes.Hoops) {
             AudioSrc.Soundtrack.clip = Res.Music.HoopsSoundtrack;
@@ -40,7 +36,6 @@ public class AudioManager : Singleton<MonoBehaviour> {
         }
     }
     
-
     public void Play(AudioClip audioClip) {
         AudioSrc.SceneSound.PlayOneShot(audioClip);
     }

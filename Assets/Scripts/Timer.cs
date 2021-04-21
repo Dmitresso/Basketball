@@ -46,7 +46,6 @@ public class Timer : MonoBehaviour {
         timeLeft -= Time.deltaTime;
         
         endTime = timeLeft;
-        Debug.Log("End time: " + endTime);
         if (playSound && timeLeft <= insaneTickSoundStart) {
             label.color = Color.red;
             audioManager.Play(insaneTickSound);

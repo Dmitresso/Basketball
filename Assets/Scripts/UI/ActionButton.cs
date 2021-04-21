@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -12,15 +13,21 @@ public class ActionButton : MonoBehaviour, IPointerEnterHandler {
     private Canvas difficultyMenu;
     private Canvas settingsMenu;
     private Canvas mainMenu;
-    
+    private TextMeshProUGUI text;
 
-    private void Start() {
+
+    private void Awake() {
         gameManager = GameObject.FindGameObjectWithTag(Tags.GM.GameManager).GetComponent<GameManager>();
         audioManager = GameObject.FindGameObjectWithTag(Tags.GM.AudioManager).GetComponent<AudioManager>();
-
+        text = GetComponentInChildren<TextMeshProUGUI>();
+        
         difficultyMenu = gameManager.difficultyMenu;
         settingsMenu = gameManager.settingsMenu;
         mainMenu = gameManager.mainMenu;
+
+        
+        Debug.Log("Res.Fonts.balooChettanRegularSDF: " + Res.Fonts.balooChettanRegularSDF);
+        if (text != null) text.font =Res.Fonts.balooChettanRegularSDF ;
     }
     
 

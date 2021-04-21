@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public static class DATA {
@@ -108,6 +109,7 @@ public struct Settings {
 
 public struct Res {
     public static void Init() {
+        Fonts.Init();
         Music.Init();
     }
     
@@ -122,7 +124,15 @@ public struct Res {
         public static readonly string СursorGrab = "Sprites/Cursor/grab";
     }
 
-    
+    public struct Fonts {
+        public static TMP_FontAsset balooChettanRegularSDF;
+        
+        private static readonly string balooChettanRegularSDFPath = "Fonts/Baloo_Chettan/BalooChettan-Regular SDF";
+
+        public static void Init() {
+            balooChettanRegularSDF = Resources.Load(balooChettanRegularSDFPath, typeof(TMP_FontAsset)) as TMP_FontAsset;
+        }
+    }
     public struct Music {
         public static AudioClip MainSoundtrack, HoopsSoundtrack;
         

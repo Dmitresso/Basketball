@@ -535,8 +535,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4806b821423748adb755b4e74e3da1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initIsAllowed: 1
-  hideAfterInit: 1
   volumeSlider: {fileID: 1323305674185697747}
   dropdownMenu: {fileID: 8570817981362062408}
 --- !u!1 &1388411908222261216
